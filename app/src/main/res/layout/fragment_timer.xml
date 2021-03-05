@@ -1,0 +1,80 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include
+                android:id="@+id/control_panel"
+                layout="@layout/timer_control_panel" />
+
+            <RelativeLayout
+                android:id="@+id/lr_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/control_panel"
+                android:layout_marginTop="@dimen/big_margin"
+                android:animateLayoutChanges="true">
+
+                <ProgressBar
+                    android:id="@+id/progressBarCircle"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="270dp"
+                    android:layout_height="270dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circle_dark_blue"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/circle"
+                    android:rotation="-90" />
+
+                <TextView
+                    android:id="@+id/textViewTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="00:00:00"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textIsSelectable="false"
+                    android:textSize="55sp"
+                    android:visibility="gone" />
+
+                <com.smartelectronics.lovelylight.utils.colorPicker.HoloCircleSeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="@dimen/medium_margin"
+                    android:visibility="visible"
+                    app:wheel_active_color="@color/colorPrimaryDark"
+                    app:wheel_unactive_color="@color/fbutton_color_clouds"
+                    app:pointer_color="@color/colorPrimaryDark"
+                    app:pointer_size="10dp"
+                    app:text_size="55dp"
+                    app:text_color="@color/colorPrimaryDark"
+                    app:max="100"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lr_timer"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_marginLeft="@dimen/medium_margin"
+                android:text="Debitis appetere placerat usu id. Mel ea probo populo pertinacia, ius te phaedrum deserunt argumentum, duo id postulant rationibus. Illud tempor elaboraret per id. Et eum maiorum denique, sit in dolorem dignissim neglegentur, sed in homero delectus. Ut mei causae sanctus corrumpit, sint brute ei nec. Vix iuvaret singulis an."
+                android:textColor="@color/fbutton_color_asbestos"/>
+
+        </RelativeLayout>
+
+
+</ScrollView>

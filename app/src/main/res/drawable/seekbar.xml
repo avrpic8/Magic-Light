@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape
+            android:shape="rectangle">
+            <corners
+                android:radius="@dimen/_5sdp"/>
+            <gradient
+                android:startColor="@color/fbutton_color_asbestos"
+                android:endColor="@color/fbutton_color_asbestos" />
+        </shape>
+    </item>
+
+    <item>
+        <clip>
+            <shape
+                android:shape="rectangle">
+                <corners
+                    android:radius="@dimen/_5sdp"/>
+                <gradient
+                    android:startColor="@color/fbutton_color_peter_river"
+                    android:endColor="@color/fbutton_color_belize_hole"/>
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

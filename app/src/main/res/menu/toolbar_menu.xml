@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context = ".activity.MainActivity">
+
+    <item
+        android:id="@+id/app_bar_switch"
+        android:title="Lamp Switch"
+        android:visible="true"
+        android:icon="@drawable/ic_lamp_on"
+        android:orderInCategory="300"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/app_bar_switch_off"
+        android:title="Lamp Switch"
+        android:visible="false"
+        android:icon="@drawable/ic_lamp_off"
+        android:orderInCategory="300"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/pump_on"
+        android:title="Pump"
+        android:visible="false"
+        android:icon="@drawable/ic_propeller_on"
+        android:orderInCategory="200"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/pump_off"
+        android:title="Pump"
+        android:visible="true"
+        android:icon="@drawable/ic_propeller_off"
+        android:orderInCategory="200"
+        app:showAsAction="always"/>
+
+
+</menu>

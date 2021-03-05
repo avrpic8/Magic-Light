@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="270dp"
+    android:layout_height="190dp"
+    app:cardCornerRadius="@dimen/small_margin">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/txt_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="@dimen/small_margin"
+                android:text="Exit"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/small_margin"
+                android:src="@drawable/ic_lamp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header_layout"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:layout_marginRight="@dimen/small_margin"
+            android:layout_marginLeft="20dp"
+            android:text="Do you want to exit this program?"
+            android:textSize="14sp"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="@dimen/_90sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/txt_message"
+            app:lottie_fileName="exit_anim.json"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+        <Button
+            android:id="@+id/button_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:text="OK"
+            android:textSize="15sp"
+            android:textColor="@color/fbutton_color_turquoise"/>
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/button_ok"
+            android:layout_alignParentLeft="true"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:text="cancel"
+            android:textSize="15sp"
+            android:textColor="@color/fbutton_color_turquoise"/>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

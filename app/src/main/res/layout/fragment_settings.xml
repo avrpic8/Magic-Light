@@ -1,0 +1,506 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.smartelectronics.lovelylight.fragments.SettingsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/small_margin"
+            app:cardElevation="@dimen/small_margin"
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:layout_marginRight="@dimen/small_margin"
+            android:layout_marginLeft="@dimen/small_margin">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edt_bluetooth"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/line1"
+                    android:layout_margin="@dimen/small_margin"
+                    android:background="@drawable/edit_text_backgound"
+                    android:drawableLeft="@drawable/edit_text_ic_background"
+                    android:singleLine="true"
+                    android:maxLength="10"
+                    android:textColor="@color/colorAccent"
+                    android:hint="@string/edit_text_hint"
+                    android:gravity="center"/>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/bt_send"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_above="@+id/txt_btName_des"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/small_margin"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    app:lottie_fileName="send.json"
+                    android:scaleType="centerCrop"
+                    android:scaleY="2"
+                    android:scaleX="2"/>
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="@dimen/small_margin"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignBottom="@id/txt_btName_des"
+                    android:background="@color/fbutton_color_peter_river"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_btName_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edt_bluetooth"
+                    android:layout_toRightOf="@+id/line1"
+                    android:layout_marginLeft="@dimen/medium_margin"
+                    android:text="Lorem ipsum dolor sit amet, mei simul tantas instructior ut, pro adhuc indoctum vulputate ei. Vel ex quot postulant reprimique. Tota admodum dissentiet sit ea. Ei vel mazim constituto, at audiam inermis vocibus vix"
+                    android:textSize="13dp"
+                    android:textColor="@color/fbutton_color_asbestos"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/small_margin"
+            app:cardElevation="@dimen/small_margin"
+            android:layout_marginTop="@dimen/big_margin"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:layout_marginRight="@dimen/small_margin"
+            android:layout_marginLeft="@dimen/small_margin">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="@dimen/small_margin"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignBottom="@id/txt_fade_des"
+                    android:background="@color/fbutton_color_concrete"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_fade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/big_margin"
+                    android:layout_toRightOf="@+id/line2"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="Fade Animation"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/fade_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignBottom="@+id/txt_fade"
+                    android:layout_marginRight="@dimen/small_margin"/>
+
+                <TextView
+                    android:id="@+id/txt_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/rdo_speed"
+                    android:layout_alignLeft="@+id/txt_fade"
+                    android:layout_alignTop="@+id/rdo_speed"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center"
+                    android:text="Speed value:"
+                    android:textColor="@color/fbutton_color_peter_river" />
+                <RadioGroup
+                    android:id="@+id/rdo_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_fade"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_toRightOf="@+id/txt_speed"
+                    android:layout_marginTop="@dimen/big_margin">
+
+                    <RadioButton
+                        android:id="@+id/rdo_slow_speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="Slow"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="13sp" />
+
+                    <RadioButton
+                        android:id="@+id/rdo_medium_speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="Medium"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="13sp"/>
+
+                    <RadioButton
+                        android:id="@+id/rdo_fast_speed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="Fast"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="13sp"/>
+
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/txt_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/layout_limit"
+                    android:layout_alignLeft="@+id/txt_speed"
+                    android:layout_alignTop="@+id/layout_limit"
+                    android:layout_below="@+id/txt_speed"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:gravity="center"
+                    android:text="Degree limit:"
+                    android:textColor="@color/fbutton_color_peter_river" />
+                <LinearLayout
+                    android:id="@+id/layout_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/txt_speed"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/big_margin"
+                    android:layout_toRightOf="@+id/txt_limit"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="from:"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="13sp" />
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content" />
+                    <EditText
+                        android:id="@+id/edt_start_degree"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_backgound"
+                        android:inputType="numberSigned"
+                        android:maxLength="4"
+                        android:maxLines="1"
+                        android:gravity="center"/>
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:text="to:"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+                    <Space
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"/>
+                    <EditText
+                        android:id="@+id/edt_end_degree"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text_backgound"
+                        android:inputType="numberSigned"
+                        android:maxLength="4"
+                        android:maxLines="1"
+                        android:gravity="center"/>
+
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_fade_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_limit"
+                    android:layout_toRightOf="@+id/line2"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:layout_marginLeft="@dimen/medium_margin"
+                    android:text="Lorem ipsum dolor sit amet, mei simul tantas instructior ut, pro adhuc indoctum vulputate ei. Vel ex quot postulant reprimique. Tota admodum dissentiet sit ea. Ei vel mazim constituto, at audiam inermis vocibus vix"
+                    android:textSize="13dp"
+                    android:textColor="@color/fbutton_color_asbestos"/>
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/small_margin"
+            app:cardElevation="@dimen/small_margin"
+            android:layout_margin="@dimen/small_margin">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/line3"
+                    android:layout_width="@dimen/small_margin"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignBottom="@id/txt_timer_des"
+                    android:background="@color/fbutton_color_amethyst"
+                     />
+
+                <TextView
+                    android:id="@+id/txt_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/big_margin"
+                    android:layout_toRightOf="@+id/line3"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="Use Timer"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <Switch
+                    android:id="@+id/timer_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignBottom="@+id/txt_timer"
+                    android:layout_marginRight="@dimen/small_margin"/>
+
+                <TextView
+                    android:id="@+id/txt_timer_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/timer_switch"
+                    android:layout_toRightOf="@+id/line3"
+                    android:layout_marginLeft="@dimen/medium_margin"
+                    android:text="Lorem ipsum dolor sit amet, mei simul tantas instructior ut, pro adhuc indoctum vulputate ei. Vel ex quot postulant reprimique. Tota admodum dissentiet sit ea. Ei vel mazim constituto, at audiam inermis vocibus vix"
+                    android:textSize="13dp"
+                    android:textColor="@color/fbutton_color_asbestos"/>
+
+            </RelativeLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/small_margin"
+            app:cardElevation="@dimen/small_margin"
+            android:layout_margin="@dimen/small_margin">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <View
+                    android:id="@+id/line4"
+                    android:layout_width="@dimen/small_margin"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignBottom="@id/txt_accSensor_des"
+                    android:background="@color/fbutton_color_turquoise"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_accSensor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/big_margin"
+                    android:layout_toRightOf="@id/line4"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="Accelerometer Sensor"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <Switch
+                    android:id="@+id/acc_sensor_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignBottom="@id/txt_accSensor"
+                    android:layout_marginRight="@dimen/small_margin"
+                    />
+                <TextView
+                    android:id="@+id/txt_accSensor_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/acc_sensor_switch"
+                    android:layout_toRightOf="@id/line4"
+                    android:layout_marginLeft="@dimen/medium_margin"
+                    android:text="Debitis appetere placerat usu id. Mel ea probo populo pertinacia, ius te phaedrum deserunt argumentum, duo id postulant rationibus. Illud tempor elaboraret per id. Et eum maiorum denique, sit in dolorem dignissim neglegentur, sed in homero delectus. Ut mei causae sanctus corrumpit, sint brute ei nec. Vix iuvaret singulis an."
+                    android:textSize="13sp"
+                    android:textColor="@color/fbutton_color_asbestos"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/small_margin"
+            app:cardElevation="@dimen/small_margin"
+            android:layout_margin="@dimen/small_margin">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/line5"
+                    android:layout_width="@dimen/small_margin"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignBottom="@id/txt_lightSensor_des"
+                    android:background="@color/fbutton_color_sun_flower"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_lightSensor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/big_margin"
+                    android:layout_toRightOf="@+id/line5"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="Light Sensor"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <Switch
+                    android:id="@+id/light_sensor_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignBottom="@id/txt_lightSensor"
+                    android:layout_marginRight="@dimen/small_margin"
+                    />
+                <TextView
+                    android:id="@+id/txt_lightSensor_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/light_sensor_switch"
+                    android:layout_toRightOf="@+id/line5"
+                    android:layout_marginLeft="@dimen/medium_margin"
+                    android:text="Debitis appetere placerat usu id. Mel ea probo populo pertinacia, ius te phaedrum deserunt argumentum, duo id postulant rationibus. Illud tempor elaboraret per id. Et eum maiorum denique, sit in dolorem dignissim neglegentur, sed in homero delectus. Ut mei causae sanctus corrumpit, sint brute ei nec. Vix iuvaret singulis an."
+                    android:textSize="13sp"
+                    android:textColor="@color/fbutton_color_asbestos"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/small_margin"
+            app:cardElevation="@dimen/small_margin"
+            android:layout_margin="@dimen/small_margin">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:id="@+id/line6"
+                    android:layout_width="@dimen/small_margin"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignBottom="@id/txt_mic_des"
+                    android:background="@color/fbutton_color_carrot"
+                    />
+
+                <TextView
+                    android:id="@+id/txt_mic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small_margin"
+                    android:layout_marginTop="@dimen/big_margin"
+                    android:layout_toRightOf="@+id/line6"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="Enable Phone Mic"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <Switch
+                    android:id="@+id/mic_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignBottom="@id/txt_mic"
+                    android:layout_marginRight="@dimen/small_margin"
+                    />
+                <TextView
+                    android:id="@+id/txt_mic_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mic_switch"
+                    android:layout_toRightOf="@+id/line6"
+                    android:layout_marginLeft="@dimen/medium_margin"
+                    android:text="@string/mic_des"
+                    android:textSize="13sp"
+                    android:textColor="@color/fbutton_color_asbestos"/>
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+
+</ScrollView>

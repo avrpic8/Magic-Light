@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Magic Light</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello about fragment</string>
+
+    <string name="edit_text_hint"><font size="13">Enter bluetooth name</font></string>
+
+    <string name="mic_des">Lorem ipsum dolor sit amet, mei simul tantas instructior ut, pro adhuc indoctum vulputate ei. Vel ex quot postulant reprimique. Tota admodum dissentiet sit ea. Ei vel mazim constituto, at audiam inermis vocibus vix. Partem perpetua interesset te cum, ut dicta summo forensibus his, invenire reformidans mea id.</string>
+</resources>
