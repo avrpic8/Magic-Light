@@ -40,6 +40,7 @@ import com.smartelectronics.lovelylight.interfaces.PumpValue;
 import com.smartelectronics.lovelylight.interfaces.SettingsClick;
 import com.smartelectronics.lovelylight.utils.bluetooth.BluetoothControl;
 import com.smartelectronics.lovelylight.utils.bluetooth.BluetoothObject;
+import com.smartelectronics.lovelylight.utils.bluetooth.BluetoothState;
 import com.smartelectronics.lovelylight.utils.colorPicker.ColorConverter;
 import com.smartelectronics.lovelylight.utils.CustomToast;
 import com.smartelectronics.lovelylight.utils.MyAlertDialog;
@@ -498,13 +499,12 @@ public class MainActivity extends AppCompatActivity implements BluetoothSPP.Blue
         bluetoothSPP.setBluetoothConnectionListener(this);
 
         //enable bluetooth module and setup it
-        /*if(bluetoothSPP.isBluetoothEnabled()){
-
+        if(bluetoothSPP.isBluetoothEnabled())
             if(!bluetoothSPP.isServiceAvailable()) {
                 bluetoothSPP.setupService();
                 bluetoothSPP.startService(BluetoothState.DEVICE_OTHER);
             }
-        }else {
+        /*}else {
             Intent btEnable = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(btEnable, BluetoothState.REQUEST_ENABLE_BT);
         }*/

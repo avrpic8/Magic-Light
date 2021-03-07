@@ -61,7 +61,7 @@ public class SplashActivity extends AppCompatActivity {
                 finish();
             }
         };
-        handler.postDelayed(runnable,6000);
+        handler.postDelayed(runnable,3000);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)

@@ -24,21 +24,15 @@
             android:textColor="@color/fbutton_color_asbestos"
             android:textStyle="bold"/>
 
-        <ListView
-            android:id="@+id/bt_list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/txt_bt_paired"
-            android:layout_marginTop="@dimen/medium_margin">
+            <ListView
+                android:id="@+id/bt_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_bt_paired"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="@dimen/small_margin">
 
-        </ListView>
-
-
+            </ListView>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
-
 
 </FrameLayout>
